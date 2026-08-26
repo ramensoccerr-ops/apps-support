@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アプリサポート</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F7F7F5;
+      color: #3A3A32;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+      color: #33443B;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #6B6B5E;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .lang-btn {
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid #4C6B5A66;
+      background: transparent;
+      color: #4C6B5A;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-btn.active { background: #4C6B5A; color: #FFFFFF; font-weight: bold; }
+    .ja-content, .en-content { display: none; width: 100%; max-width: 560px; }
+    .ja-content.active, .en-content.active { display: block; }
+    .intro {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4A4A40;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .app-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .app-card {
+      background: #FFFFFF;
+      border: 1px solid #E4E0D0;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .app-card .emoji { font-size: 28px; flex-shrink: 0; }
+    .app-card .name { font-weight: bold; font-size: 16px; color: #33443B; margin-bottom: 2px; }
+    .app-card .desc { font-size: 13px; color: #6B6B5E; line-height: 1.5; }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E4E0D0;
+      border-radius: 16px;
+      padding: 24px 28px;
+      width: 100%;
+    }
+    .card h2 {
+      font-size: 16px;
+      color: #4C6B5A;
+      margin-bottom: 12px;
+    }
+    .card p { font-size: 14px; line-height: 1.7; color: #4A4A40; }
+    .contact-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4C6B5A;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-link:hover { text-decoration: underline; }
+    footer {
+      margin-top: 32px;
+      font-size: 12px;
+      color: #6B6B5E99;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>アプリサポート</h1>
+  <p class="subtitle">Yuto Nishiyama — App Support</p>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('ja')">日本語</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- 日本語コンテンツ -->
+  <div class="ja-content active">
+    <p class="intro">個人開発で公開しているアプリのサポート窓口です。<br>該当するアプリを確認のうえ、下記までお問い合わせください。</p>
+
+    <div class="app-list">
+      <div class="app-card"><div class="emoji">💑</div><div><div class="name">同棲相性診断</div><div class="desc">同棲前カップルのかんたん相性チェック</div></div></div>
+      <div class="app-card"><div class="emoji">👑</div><div><div class="name">リバーシ最弱王</div><div class="desc">負けることを目指すリバーシゲーム</div></div></div>
+      <div class="app-card"><div class="emoji">🔔</div><div><div class="name">発売日アラート</div><div class="desc">気になる商品の発売日をお知らせ</div></div></div>
+      <div class="app-card"><div class="emoji">⚽</div><div><div class="name">サッカー観戦記録</div><div class="desc">観戦した試合の記録・データ分析</div></div></div>
+      <div class="app-card"><div class="emoji">🎸</div><div><div class="name">バンドマン育成</div><div class="desc">路上からスタジアムを目指す育成シミュレーション</div></div></div>
+      <div class="app-card"><div class="emoji">🎢</div><div><div class="name">コロコロシーソー</div><div class="desc">傾け系アクションパズルゲーム</div></div></div>
+      <div class="app-card"><div class="emoji">🗒️</div><div><div class="name">いつかはやるリスト</div><div class="desc">期限を決めて寝かせておけるToDoアプリ</div></div></div>
+      <div class="app-card"><div class="emoji">📅</div><div><div class="name">今日の漢字</div><div class="desc">毎日を漢字1文字で記録する日記アプリ</div></div></div>
+    </div>
+
+    <div class="card">
+      <h2>✉️ お問い合わせ</h2>
+      <p>ご質問・ご意見・不具合のご報告は、アプリ名を添えて以下のメールアドレスまでお送りください。</p>
+      <a class="contact-link" href="mailto:ramen.soccerr@gmail.com">ramen.soccerr@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- English content -->
+  <div class="en-content">
+    <p class="intro">Support hub for apps published by an independent developer.<br>Please check the app below and contact us using the email address.</p>
+
+    <div class="app-list">
+      <div class="app-card"><div class="emoji">💑</div><div><div class="name">Dosei Shindan</div><div class="desc">A quick compatibility check for couples before living together</div></div></div>
+      <div class="app-card"><div class="emoji">👑</div><div><div class="name">Reversi Master of Losing</div><div class="desc">A Reversi game where the goal is to lose</div></div></div>
+      <div class="app-card"><div class="emoji">🔔</div><div><div class="name">Release Alert</div><div class="desc">Get notified about release dates for products you're watching</div></div></div>
+      <div class="app-card"><div class="emoji">⚽</div><div><div class="name">Soccer Watch Record</div><div class="desc">Record and analyze the matches you've watched</div></div></div>
+      <div class="app-card"><div class="emoji">🎸</div><div><div class="name">Bandman</div><div class="desc">A band-growth simulation from street to stadium</div></div></div>
+      <div class="app-card"><div class="emoji">🎢</div><div><div class="name">Seesaw Roll</div><div class="desc">A tilt-based action puzzle game</div></div></div>
+      <div class="app-card"><div class="emoji">🗒️</div><div><div class="name">Itsuka Wa Yaru List</div><div class="desc">A to-do app that lets you set a due date and let things rest</div></div></div>
+      <div class="app-card"><div class="emoji">📅</div><div><div class="name">Kyou no Kanji</div><div class="desc">A diary app that records each day with a single kanji character</div></div></div>
+    </div>
+
+    <div class="card">
+      <h2>✉️ Contact</h2>
+      <p>For questions, feedback, or bug reports, please contact us with the app name included.</p>
+      <a class="contact-link" href="mailto:ramen.soccerr@gmail.com">ramen.soccerr@gmail.com</a>
+    </div>
+  </div>
+
+  <footer>© 2026 Yuto Nishiyama. All rights reserved.</footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.ja-content, .en-content').forEach(c => c.classList.remove('active'));
+      document.querySelector('.' + lang + '-content').classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
